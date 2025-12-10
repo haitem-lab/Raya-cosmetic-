@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Favicon for Cosmetic Brand -->
+<link rel="icon" type="image/png" href="images/cosmetic-icon.png">
+<meta name="theme-color" content="#ff9ecb">
+<meta name="description" content="Raya Cosmetic — beauty, skincare and makeup products for your perfect glow.">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raya Cosmetic - Premium Cosmetics Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Arial', sans-serif; background-color: #f8f8f8; color: #333; line-height: 1.6; }
+        
+        /* ===== dik lfou9ani dyal lpage ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #f3e5f5;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(234, 3, 80, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #ed2c6d; /* Cosmetic pink tone */
+  letter-spacing: 1px;
+  transition: transform 0.8s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline hover effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e91e63;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #e91e63;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* When scrolling - slight background change */
+header.scrolled {
+  background: rgba(224, 217, 217, 0.95);
+  box-shadow: 0 4px 20px rgba(84, 84, 84, 0.08);
+  padding: 12px 50px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+
+        
+        /* Breadcrumb */
+        .breadcrumb { background: #fff; padding: 10px 20px; border-bottom: 1px solid #eee; font-size: 0.9em; }
+        .breadcrumb a { color: #666; text-decoration: none; margin-right: 5px; }
+        .breadcrumb a:hover { color: #f70455; }
+        
+        /* Main Container - Full-width without sidebar */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+        
+        /* Product Grid - 4 columns like reference, full-width */
+        .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .product { background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s; }
+        .product:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .product img { width: 100%; height: 300px; object-fit: cover; }
+        .product-info { padding: 15px; }
+        .product h3 { font-size: 1em; margin-bottom: 5px; color: #333; }
+        .product p { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        .price { font-size: 1.2em; font-weight: bold; color: #e91e63; margin-bottom: 10px; }
+        .buy-btn { background: #25D366; /* WhatsApp green */ color: #fff; border: none; padding: 10px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .buy-btn:hover { background: #128C7E; }
+        
+        /* Footer */
+        footer { background: #333; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .products { grid-template-columns: repeat(2, 1fr); }
+            header { flex-direction: column; text-align: center; }
+            nav ul { flex-direction: column; margin-top: 10px; }
+            .container { padding: 0 10px; }
+        }
+        @media (max-width: 480px) {
+            .products { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <div class="logo"><italic>RAYA Cosmetics</italic></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="https://www.instagram.com/riir.iisproducts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#home">Home</a> &gt; <a href="#shop">Shop</a> &gt; <span>Premium Cosmetics Collection</span>
+    </div>
+    
+    <!-- Main Content - Products Only -->
+    <div class="container">
+        <!-- Products Grid -->
+        <main class="products" id="productsGrid"> 
+
+            <!-- Sample Product 1 -->
+<div class="product">
+  <img src="https://cdn.salla.sa/zpBEG/3662b544-6077-40f2-af5a-51d66d275128-1000x1000-Nkdtbv2idMlsDp9zm3TbZJy02mqoXYmOEPkN2kCD.jpg" alt="The Ritual of Karma">
+  <div class="product-info">
+    <h3>Kiko Milano</h3>
+    <p>Unlimited Double Touch Lipstic</p>
+    <div class="product-price">
+    <span class="old-price">
+        <del>200.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+    <div class="price">150.00 DH</div>
+    <button class="buy-btn" onclick="buyProduct('The Ritual of Karma', '350.00 DH')">Buy Now</button>
+  
+</div>
+</div>
+
+
+
+<script>
+function buyProduct(productName, price) {
+  // ✅ Your WhatsApp number (no +, no spaces)
+  const phoneNumber = "212785932731"; // replace with your own number
+
+  // Create message
+  const message = `Hello! I want to buy the product: ${productName} for ${price}.`;
+
+  // Encode and build the WhatsApp link
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  // Open WhatsApp in a new tab
+  window.open(whatsappURL, '_blank');
+}
+</script>
+
+
+            <!-- Sample Product 2 -->
+            <div class="product">
+                <img src="https://i1.perfumesclub.com/media/211158.jpg" alt="Flawless Foundation">
+                <div class="product-info">
+                    <h3>Michael Kors ÉTUI AMBRE SEXY</h3>
+                    <p>Coffret pour femme
+Eau de Parfum vaporisateur 100 ml + Gel Douche 100 ml + Lait Corps 100 ml + Eau de Parfum vaporisateur 10 ml
+</p>
+                    <div class="product-price">
+    <span class="old-price">
+        <del>1200.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+
+                    <div class="price">950.00 DH</div>
+                    <button class="buy-btn" onclick="buyProduct('Flawless Foundation', '$25.00')">Buy Now</button>
+                    <script>
+function buyProduct(productName, price) {
+  // Your WhatsApp number (in international format, without + or spaces)
+  const phoneNumber = "+212 785-932731"; // ← change this to your real WhatsApp number
+
+  // Create message text
+  const message = `Hello! I want to buy the product: ${productName} for ${price}.`;
+
+  // Encode message for URL
+  const encodedMessage = encodeURIComponent(message);
+
+  // WhatsApp link
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  // Open WhatsApp
+  window.open(whatsappURL, '_blank');
+}
+</script>
+
+                </div>
+            </div>
+            
+            <!-- Sample Product 3 -->
+            <div class="product">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTpofywwuQQ-Qafvxd_l4PVXfwTuNSuXAyvLIuq9UgRkRtsxcEo" alt="Precision Eyeliner">
+                <div class="product-info">
+                    <h3>Parfum ZARA</h3>
+                    <p>Golden Decade Body Glitter Spray - 100 ML
+</p>
+                <div class="product-price">
+    <span class="old-price">
+        <del>250.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+                    <div class="price">200.00 DH</div>
+                    <button class="buy-btn" onclick="buyProduct('Precision Eyeliner', '$12.00')">Buy Now</button>
+                </div>
+            </div>
+            
+            <!-- Sample Product 4 -->
+            <div class="product">
+                <img src="https://cdn.dsmcdn.com/ty1671/prod/QC/20250504/22/f1e6374c-026e-3de3-a15f-91587c285dcb/1_org_zoom.jpg" alt="Hydrating Serum">
+                <div class="product-info">
+                    <h3>RED ZARA TEMPTATION BODY GLITTER SPRAY
+</h3>
+                    <p></p>
+                    <div class="product-price">
+    <span class="old-price">
+        <del>300.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+                    <div class="price">200.00 DH</div>
+                    <button class="buy-btn" onclick="buyProduct('Hydrating Serum', '$20.00')">Buy Now</button>
+                </div>
+            </div>
+            
+            <!-- Sample Product 5 -->
+            <div class="product">
+                <img src="https://zeystore.fr/cdn/shop/files/0B0AC851-3537-4A64-8D4C-B1F6A355FF41.jpg?v=1746183382&width=1024" alt="BB Cream">
+                <div class="product-info">
+                    <h3>ZARA Hypnotic Vanilla ELIXIR For Women 80ml</h3>
+                    <p></p>
+                     <div class="product-price">
+    <span class="old-price">
+        <del>450.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+                    <div class="price">400.00 DH</div>
+                    <button class="buy-btn" onclick="buyProduct('BB Cream', '$18.00')">Buy Now</button>
+                </div>
+            </div>
+            
+            <!-- Sample Product 6 -->
+            <div class="product">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_729696-MLM82998238760_032025-O.webp" alt="Sheet Mask Pack">
+                <div class="product-info">
+                    <h3>Dark Romance Zara</h3>
+                    <p></p>
+                     <div class="product-price">
+    <span class="old-price">
+        <del>450.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+                    <div class="price">400.00 DH</div>
+                    <button class="buy-btn" onclick="buyProduct('Sheet Mask Pack (5pcs)', '$30.00')">Buy Now</button>
+                </div>
+            </div>
+            
+            <!-- Sample Product 7 -->
+            <div class="product">
+                <img src="https://i.ebayimg.com/images/g/wyUAAeSwlfFovLoE/s-l400.png" alt="Cushion Compact">
+                <div class="product-info">
+                    <h3>Pack CHAPTER DISCOVERY</h3>
+                    <p>SET EDP 4 X 12 ML</p>
+                     <div class="product-price">
+    <span class="old-price">
+        <del>650.00 DH</del><!-- hadi dyal lprix l9dim  -->
+    </span>
+    <span class="new-price">
+        <strong></strong>
+    </span>
+</div>
+                    <div class="price">600.00 DH</div>
+                    <button class="buy-btn" onclick="buyProduct('Cushion Compact', '$22.00')">Buy Now</button>
+                </div>
+            </div>
+            
+            <!-- Sample Product 8 -->
+            <div class="product">
+    <img id="product-image" src="https://cdn-images.farfetch-contents.com/25/63/63/64/25636364_55907133_1000.jpg" alt="GUESS Sac à épaule pour femme" style="width:300px;">
+    <div class="product-info">
+        <h3>GUESS Sac à épaule pour femme</h3>
+        <p>Vikky Large Tote Taupe disponible en 4 couleurs</p>
+        <div class="product-price">
+            <span class="old-price"><del>1200.00 DH</del></span>
+            <div class="price">1000.00 DH</div>
+        </div>
+        <button class="buy-btn" onclick="buyProduct('GUESS Sac à épaule', '1000.00 DH')">Buy Now</button>
+        <div style="margin-top:10px;">
+            <button onclick="prevImage()">&#10094; Prev</button>
+            <button onclick="nextImage()">Next &#10095;</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Replace with your real product color images
+    const images = [
+        "https://cdn-images.farfetch-contents.com/25/63/63/64/25636364_55907133_1000.jpg",
+        "https://images.modeherz.de/item/images/312192/full/GUESS-Schultertasche-Vikky-Tote-Stone-Logo-312192.jpg",
+        "https://m.media-amazon.com/images/I/71WD5DpVDtL._AC_SL1500_.jpg",
+        "https://media.6media.me/media/catalog/product/1/9/190231761440-1.jpg"
+    ];
+
+    let current = 0;
+    const imgElement = document.getElementById('product-image');
+
+    function showImage(index) {
+        current = index;
+        imgElement.src = images[current];
+    }
+
+    function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+    }
+
+    function prevImage() {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+    }
+</script>
+
+        
+            
+           
+            
+    
+    <!-- Footer -->
+    
+
+    <script>
+        function buyProduct(productName, price) {
+            const phoneNumber = '212 785-932731'; // Replace with your WhatsApp number (e.g., +212600000000)
+            const message = `Hi, I want to buy ${productName} for ${price} from Raya Cosmetic. Please assist!`;
+            const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+    <script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+</body>
+</html>
